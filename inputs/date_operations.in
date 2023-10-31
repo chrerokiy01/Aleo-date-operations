@@ -1,0 +1,35 @@
+[add_delta_to_date]
+date: Date = Date {
+    year: 2023u64,
+    month: 10u64,
+    day: 29u64
+};
+delta: Date = Date {
+    year: 0u64,
+    month: 10u64,
+    day: 0u64
+};
+
+[sub_delta_from_date]
+date: Date = Date {
+    year: 2023u64,
+    month: 10u64,
+    day: 29u64
+};
+delta: Date = Date {
+    year: 0u64,
+    month: 0u64,
+    day: 1007u64
+};
+
+[date_difference]
+first_date: Date = Date {
+    year: 2023u64,
+    month: 10u64,
+    day: 29u64
+};
+second_date: Date = Date {
+    year: 2020u64,
+    month: 11u64,
+    day: 30u64
+};
