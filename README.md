@@ -21,26 +21,34 @@ Welcome to the `date_operations` program, a magnificent creation written in the 
 
 #### Add Delta to Date
 
-```leo
+```bash
 leo run add_delta_to_date <date> <delta>
 ```
 - Adds the `delta` (years, months, days) to the `date`.
 - Returns a new `Date` struct with the modified date.
 
 #### Subtract Delta from Date
-```leo
+```bash
 leo run sub_delta_from_date <date> <delta>
 ```
 - Subtracts the `delta` (years, months, days) from the `date`.
 - Returns a new `Date` struct with the modified date.
 
 #### Date Difference
-```leo
+```bash
 leo run date_difference <first_date> <second_date>
 ```
 
 - Calculates the difference between first_date and second_date.
 - Returns a new Date struct representing the difference in years, months, and days
+
+#### Day of week
+```bash
+leo run day_of_week <date>
+```
+
+- Calculates the day of the week for a date
+- Returns the number of the day of the week, where 0u8 is Monday and 6u8 is Sunday
 
 ## 📚 Documentation
 For more detailed information on the Leo programming language and its syntax, you can visit the official documentation [here](https://developer.aleo.org/leo/).

@@ -194,4 +194,26 @@ program date_operations.aleo {
             day: day
         };
     }
+
+    transition day_of_week(date: Date) -> u8 {
+        assert(date.month >= 1u64);
+        assert(date.month <= 12u64);
+        assert(date.day >= 1u64);
+        assert(date.day <= days_in_month(date.month, date.year));
+
+        let year: u64 = date.year;
+        let month: u64 = date.month;
+        let day: u64 = date.day;
+
+        if (month < 3u64) {
+            month += 12u64;
+            year -= 1u64;
+        }
+
+        let century: u64 = year / 100u64;
+        let year_of_century: u64 = year % 100u64;
+        let f: u64 = day + ((13u64 * (month + 1u64)) / 5u64) + year_of_century + (year_of_century / 4u64) + (century / 4u64) + (5u64 * century);
+
+        return ((f + 5u64) % 7u64) as u8;
+    }
 }

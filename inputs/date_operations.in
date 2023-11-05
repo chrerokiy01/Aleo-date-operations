@@ -33,3 +33,10 @@ second_date: Date = Date {
     month: 11u64,
     day: 30u64
 };
+
+[day_of_week]
+date: Date = Date {
+    year: 2023u64,
+    month: 10u64,
+    day: 21u64
+};
